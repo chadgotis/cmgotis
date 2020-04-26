@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  font-family: montserrat;
+  margin: 0;
+}
+
+.container {
+  overflow: hidden;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #00bfaf;
+  padding: 1rem;
+  color: #ffffff;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 99;
+}
+
+header .logo {
+  margin-right: auto;
+  font-size: 1.2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+header .logo span {
+  font-weight: bold;
+}
+
+header nav {
+  display: none;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+header .burger {
+  margin-right: 2rem;
+}
+
+.hero-section {
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.hero-section .circle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+  background: #ff598f;
+  right: -120px;
+}
+
+.hero-section .triangle1 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 86.60254px solid #01dddd;
+  bottom: 40px;
+  left: -7px;
+  -webkit-transform: rotate(-37deg);
+          transform: rotate(-37deg);
+}
+
+.hero-section .triangle2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 60px solid transparent;
+  border-left: 60px solid transparent;
+  border-bottom: 111.96152px solid #fd8a5e;
+  bottom: -20px;
+  right: -40px;
+  -webkit-transform: rotate(133deg);
+          transform: rotate(133deg);
+  z-index: -1;
+}
+
+.hero-section img {
+  min-width: 290px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.hero-section .welcome-text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  height: 200px;
+  width: 100%;
+}
+
+.hero-section .welcome-text h1 {
+  color: #707070;
+  font-weight: normal;
+  text-align: center;
+}
+
+.hero-section .welcome-text h1 span {
+  font-size: 7rem;
+  font-weight: bold;
+  color: #ff598f;
+}
+
+.hero-section .welcome-text h2 {
+  text-align: center;
+  line-height: 12px;
+  font-size: 1.68rem;
+  color: #707070;
+  font-weight: normal;
+}
+
+.project-section {
+  color: #707070;
+}
+
+.project-section .project-title h1 {
+  text-align: center;
+}
+
+.project-section .project-title .line {
+  height: 6px;
+  width: 60%;
+  background: #00bfaf;
+  margin: auto;
+  margin-top: 0.2rem;
+}
+
+.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-list .card {
+  margin: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 280px;
+  padding: 1rem;
+}
+
+.card-list .card .card1 {
+  background: url(../assets/travelium.jpg);
+}
+
+.card-list .card .card2 {
+  background: url(../assets/Foodster.jpg);
+}
+
+.card-list .card .card3 {
+  background: url(../assets/bantaycovid.jpg);
+}
+
+.card-list .card .card-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.card-list .card .card-content {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-list .card .card-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-list .card .card-links ul li a {
+  text-decoration: none;
+  color: #00bfaf;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */
