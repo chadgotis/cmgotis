@@ -5,6 +5,12 @@ html {
 }
 .show-desktop {
   display: none;
+  @include media(">=custom1", "<=tablet") {
+    display: inline;
+  }
+  @include media(">tablet") {
+    display: inline;
+  }
 }
 $primary: #00bfaf;
 $orange: #fd8a5e;
@@ -22,6 +28,8 @@ $logo-size: 1.2rem;
 }
 .container {
   overflow: hidden;
+  max-width: 1366px;
+  margin: auto;
 }
 
 // header
@@ -31,6 +39,7 @@ header {
   padding: 1rem;
   color: $white;
   width: 100vw;
+  max-width: 1366px;
   position: fixed;
   top: 0;
   overflow: hidden;
@@ -47,14 +56,19 @@ header {
   }
   nav {
     display: none;
+    @include media(">tablet") {
+      display: flex;
+      margin-right: 2rem;
+    }
     ul {
       display: flex;
-
       li {
         list-style-type: none;
 
+        padding: 0.5rem;
         a {
           text-decoration: none;
+          color: $white;
         }
       }
     }
@@ -62,6 +76,9 @@ header {
   .burger {
     margin-right: 2rem;
     cursor: pointer;
+    @include media(">tablet") {
+      display: none;
+    }
   }
 }
 // header
@@ -72,6 +89,15 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
+  @include media(">=custom1", "<=tablet") {
+    height: 400px;
+    margin-top: 2rem;
+  }
+  @include media(">tablet") {
+    margin-top: 4rem;
+    height: 700px;
+  }
   .circle {
     width: 150px;
     height: 150px;
@@ -79,6 +105,14 @@ header {
     border-radius: 50%;
     background: $pink;
     right: -120px;
+    @include media(">=custom1", "<=tablet") {
+      top: 20px;
+      right: -50px;
+    }
+    @include media(">tablet") {
+      top: 40px;
+      right: -20px;
+    }
   }
   .triangle1 {
     position: absolute;
@@ -104,36 +138,74 @@ header {
     transform: rotate(133deg);
     z-index: -1;
   }
-  img {
-    min-width: 290px;
-    flex: 0 0 100%;
-  }
-  .welcome-text {
-    flex: 0 0 100%;
-    height: 200px;
-    width: 100%;
-    h1 {
-      color: $font-color;
-      font-weight: normal;
-      text-align: center;
-      span {
-        font-size: 7rem;
-        font-weight: bold;
-        color: $pink;
+  main {
+    @include media(">=custom1", "<=tablet") {
+      display: flex;
+      width: 80%;
+    }
+    @include media(">tablet") {
+      display: flex;
+      width: 80%;
+    }
+    img {
+      min-width: 290px;
+      @include media(">=custom1", "<=tablet") {
+        max-width: 200px;
+      }
+      @include media(">tablet") {
+        width: 450px;
       }
     }
-    h2 {
-      text-align: center;
-      line-height: 12px;
-      font-size: 1.68rem;
-      color: $font-color;
-      font-weight: normal;
+    .welcome-text {
+      height: 200px;
+      width: 100%;
+      @include media(">=custom1", "<=tablet") {
+        align-self: flex-start;
+      }
+      @include media(">tablet") {
+        align-self: flex-start;
+      }
+      h1 {
+        color: $font-color;
+        font-weight: normal;
+        text-align: center;
+        @include media(">tablet") {
+          font-size: 4rem;
+
+          font-weight: 500;
+        }
+        span {
+          font-size: 7rem;
+          font-weight: bold;
+          color: $pink;
+          @include media(">tablet") {
+            font-size: 14rem;
+          }
+        }
+      }
+      h2 {
+        text-align: center;
+        line-height: 12px;
+        font-size: 1.68rem;
+        color: $font-color;
+        font-weight: normal;
+        @include media(">=custom1", "<=tablet") {
+          line-height: 25px;
+        }
+        @include media(">tablet") {
+          font-size: 3rem;
+          line-height: 50px;
+          font-weight: 500;
+          width: 800px;
+        }
+      }
     }
   }
 }
 // hero-section
 // project
 .project-section {
+  position: relative;
   color: $font-color;
   .project-title {
     h1 {
@@ -160,6 +232,7 @@ header {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 280px;
     padding: 1rem;
+    background: $white;
     .card1 {
       background: url(../assets/travelium.jpg);
     }
@@ -217,6 +290,12 @@ header {
     .backend {
       padding: 1rem;
       width: 280px;
+      @include media(">=custom1", "<=tablet") {
+        flex: 1 1 0;
+      }
+      @include media(">tablet") {
+        flex: 1 1 0;
+      }
       h2 {
         text-align: center;
       }
@@ -227,6 +306,12 @@ header {
         flex-direction: column;
 
         li {
+          @include media(">=custom1", "<=tablet") {
+            width: 90%;
+          }
+          @include media(">tablet") {
+            width: 50%;
+          }
           width: 200px;
           margin: auto;
           text-align: center;
@@ -293,8 +378,17 @@ header {
 .about {
   color: $font-color;
   padding: 1rem;
+  @include media(">tablet") {
+    margin: 1rem;
+  }
   .show-mobile {
     text-align: center;
+    @include media(">=custom1", "<=tablet") {
+      display: none;
+    }
+    @include media(">tablet") {
+      display: none;
+    }
   }
   .line {
     width: 80%;
@@ -302,13 +396,62 @@ header {
     background: $primary;
     margin: auto;
     margin-bottom: 1rem;
+    @include media(">=custom1", "<=tablet") {
+      display: none;
+    }
+    @include media(">tablet") {
+      display: none;
+    }
   }
   .about-flex {
     display: flex;
     flex-direction: column;
+    @include media(">=custom1", "<=tablet") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include media(">tablet") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
     img {
       margin-bottom: 1rem;
       text-align: justify;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 1rem;
+      @include media(">=custom1", "<=tablet") {
+        width: 50%;
+      }
+      @include media(">tablet") {
+        width: 40%;
+      }
+    }
+    .story {
+      @include media(">=custom1", "<=tablet") {
+        padding: 0.5rem;
+        width: 50%;
+        text-align: justify;
+        position: relative;
+      }
+      @include media(">tablet") {
+        padding: 0.5rem;
+        width: 40%;
+        text-align: justify;
+        position: relative;
+      }
+      h1 {
+        position: absolute;
+        right: 0;
+      }
+      p {
+        @include media(">=custom1", "<=tablet") {
+          margin-top: 4rem;
+        }
+        @include media(">tablet") {
+          margin-top: 4rem;
+        }
+      }
     }
   }
 }
@@ -319,6 +462,9 @@ header {
   h1 {
     text-align: center;
     color: $font-color;
+    @include media(">tablet") {
+      text-align: left;
+    }
   }
   .line {
     width: 70%;
@@ -327,11 +473,38 @@ header {
 
     margin: auto;
     margin-bottom: 1rem;
+    @include media(">tablet") {
+      margin-left: 0;
+      width: 30%;
+    }
   }
   img {
+    @include media(">tablet") {
+      margin-left: 1rem;
+      width: 20%;
+    }
   }
   .contact-section {
+    @include media(">=custom1", "<=tablet") {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    @include media(">tablet") {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    img {
+      @include media(">=custom1", "<=tablet") {
+        flex: 1 1 0;
+        width: 90%;
+      }
+      @include media(">tablet") {
+        flex: 1 1 0;
+        width: 90%;
+      }
+    }
     form {
+      flex: 1 1 0;
       display: flex;
       flex-direction: column;
 
@@ -429,3 +602,91 @@ footer {
   transform: translateX(0%);
 }
 // side-menu
+
+// circles
+@include media(">=custom1", "<=tablet") {
+  .circle1 {
+    top: 80px;
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    position: absolute;
+    left: -40px;
+    background: $primary;
+    z-index: -999;
+  }
+  .circle2 {
+    top: 50%;
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    position: absolute;
+    right: -40px;
+    background: $blue;
+    z-index: -999;
+  }
+  .circle3 {
+    bottom: 0px;
+    width: 250px;
+    border-radius: 50%;
+    height: 250px;
+    position: absolute;
+    left: -150px;
+    background: $pink;
+    z-index: -999;
+  }
+}
+@include media(">tablet") {
+  .circle1 {
+    top: 80px;
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    position: absolute;
+    left: -40px;
+    background: $primary;
+    z-index: -999;
+  }
+  .circle2 {
+    top: 50%;
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    position: absolute;
+    right: -40px;
+    background: $blue;
+    z-index: -999;
+  }
+  .circle3 {
+    bottom: 0px;
+    width: 250px;
+    border-radius: 50%;
+    height: 250px;
+    position: absolute;
+    left: -150px;
+    background: $pink;
+    z-index: -999;
+  }
+}
+
+// circles
+@include media(">=custom1", "<=tablet") {
+}
+.line123 {
+  @include media(">=custom1", "<=tablet") {
+    width: 90%;
+    height: 6px;
+    background: $primary;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  @include media(">tablet") {
+    width: 90%;
+    height: 6px;
+    background: $primary;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+}
