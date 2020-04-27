@@ -1,5 +1,11 @@
 @import "./media_query.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+.show-desktop {
+  display: none;
+}
 $primary: #00bfaf;
 $orange: #fd8a5e;
 $blue: #01dddd;
@@ -55,6 +61,7 @@ header {
   }
   .burger {
     margin-right: 2rem;
+    cursor: pointer;
   }
 }
 // header
@@ -191,3 +198,234 @@ header {
   }
 }
 // project
+// skills
+.skillset {
+  .skillset-title {
+    background: $primary;
+    color: $white;
+    text-align: center;
+    width: 100%;
+  }
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: $font-color;
+
+    .frontend,
+    .other-tools,
+    .backend {
+      padding: 1rem;
+      width: 280px;
+      h2 {
+        text-align: center;
+      }
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        li {
+          width: 200px;
+          margin: auto;
+          text-align: center;
+          color: $white;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          border-radius: 25px;
+          font-weight: bold;
+        }
+      }
+    }
+    .frontend {
+      .line {
+        width: 60%;
+        height: 6px;
+        background: $pink;
+        margin: auto;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        li {
+          padding: 1rem;
+          background: $pink;
+        }
+      }
+    }
+    .other-tools {
+      .line {
+        width: 60%;
+        height: 6px;
+        background: $blue;
+        margin: auto;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        li {
+          padding: 1rem;
+          background: $blue;
+        }
+      }
+    }
+    .backend {
+      .line {
+        width: 60%;
+        height: 6px;
+        background: $orange;
+        margin: auto;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        li {
+          padding: 1rem;
+          background: $orange;
+        }
+      }
+    }
+  }
+}
+// skills
+// about
+.about {
+  color: $font-color;
+  padding: 1rem;
+  .show-mobile {
+    text-align: center;
+  }
+  .line {
+    width: 80%;
+    height: 6px;
+    background: $primary;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .about-flex {
+    display: flex;
+    flex-direction: column;
+    img {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+  }
+}
+// about
+// contact
+.contact {
+  margin: 1rem;
+  h1 {
+    text-align: center;
+    color: $font-color;
+  }
+  .line {
+    width: 70%;
+    height: 6px;
+    background: $primary;
+
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  img {
+  }
+  .contact-section {
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        outline-color: $primary;
+        padding: 0.3rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: none;
+        border-bottom: 2px solid $primary;
+        &:focus {
+          outline: none;
+        }
+      }
+      textarea {
+        padding: 0.5rem;
+        border-color: $primary;
+        &:focus {
+          outline: none;
+        }
+      }
+      input[type="submit"] {
+        border: none;
+        width: 60%;
+        margin: auto;
+        margin-top: 1rem;
+        padding: 1rem;
+        background: $pink;
+        color: $white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+// contact
+// footer
+footer {
+  background: $primary;
+  padding: 1rem;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      list-style-type: none;
+      margin: 0.6rem;
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
+// footer
+
+// side-menu
+.side-menu {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  background: $primary;
+  z-index: 98;
+  right: 0;
+  transform: translateX(100%);
+  transition: 0.3s ease;
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    li {
+      list-style-type: none;
+      margin: 1rem;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}
+.show-menu {
+  transform: translateX(0%);
+}
+// side-menu

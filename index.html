@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CM.gotis</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
-    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -24,10 +20,21 @@
             <li><a href="#">Resume</a></li>
           </ul>
         </nav>
-        <div class="burger"><img src="./assets/burger.svg" /></div>
+        <div id="menu" class="burger"><img src="./assets/burger.svg" /></div>
       </header>
+
+      <div id="side-menu" class="side-menu">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </div>
       <!-- navigation -->
       <!-- hero -->
+      <div id="hero"></div>
       <div class="hero-section">
         <div class="circle"></div>
         <div class="triangle1"></div>
@@ -42,7 +49,8 @@
       </div>
       <!-- hero -->
       <!-- projects -->
-      <div class="project-section">
+
+      <div id="projects" class="project-section">
         <div class="project-title">
           <h1>My Projects</h1>
           <div class="line"></div>
@@ -99,6 +107,109 @@
         </div>
       </div>
       <!-- projects -->
+      <!-- skills -->
+      <div id="skills" class="skillset">
+        <div class="skillset-title">
+          <h1>Skills</h1>
+        </div>
+        <div class="skills">
+          <div class="frontend">
+            <h2>FrontEnd</h2>
+            <div class="line"></div>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>SASS</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+          <div class="other-tools">
+            <h2>Other Tools</h2>
+            <div class="line"></div>
+            <ul>
+              <li>Git</li>
+              <li>VS Code</li>
+              <li>Adobe XD</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+            </ul>
+          </div>
+          <div class="backend">
+            <h2>Backend</h2>
+            <div class="line"></div>
+            <ul>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Codeigniter</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- skills -->
+      <!-- about -->
+      <div id="about" class="about">
+        <h1 class="show-mobile">About Chad</h1>
+        <div class="about-chad">
+          <div class="line"></div>
+          <div class="about-flex">
+            <img src="./assets/coding_.svg" alt="coding" />
+            <div class="story">
+              <h1 class="show-desktop">About Chad</h1>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- about -->
+      <!-- contact -->
+      <div id="contact" class="contact">
+        <h1>Contact Me</h1>
+        <div class="line"></div>
+        <div class="contact-section">
+          <img src="./assets/new_message.svg" alt="message" />
+          <form
+            action="mailto:chadgotis97@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <input type="text" name="name" placeholder="Full Name" />
+            <input type="email" name="email" placeholder="Email" />
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Enter Message"
+            ></textarea>
+            <input type="submit" value="SEND MESSAGE" />
+          </form>
+        </div>
+      </div>
+      <!-- contact -->
+      <!-- footer -->
+      <footer>
+        <div class="social">
+          <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <p>&copy 2020</p>
+      </footer>
+      <!-- footer -->
     </div>
     <script src="./js/main.js"></script>
   </body>
