@@ -43,6 +43,8 @@ header {
   top: 0;
   overflow: hidden;
   z-index: 99;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 header .logo {
@@ -53,6 +55,7 @@ header .logo {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  margin-left: 1rem;
 }
 
 header .logo span {
@@ -124,7 +127,7 @@ header .burger {
 
 @media (min-width: 769px) {
   .hero-section {
-    margin-top: 4rem;
+    height: 400px;
     height: 700px;
   }
 }
@@ -193,7 +196,7 @@ header .burger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 80%;
+    width: 900px;
   }
 }
 
@@ -209,7 +212,7 @@ header .burger {
 
 @media (min-width: 769px) {
   .hero-section main img {
-    width: 450px;
+    min-width: 400px;
   }
 }
 
@@ -240,7 +243,7 @@ header .burger {
 
 @media (min-width: 769px) {
   .hero-section main .welcome-text h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 500;
   }
 }
@@ -273,10 +276,11 @@ header .burger {
 
 @media (min-width: 769px) {
   .hero-section main .welcome-text h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 50px;
     font-weight: 500;
-    width: 800px;
+    text-align: center;
+    margin-top: -1rem;
   }
 }
 
@@ -317,6 +321,17 @@ header .burger {
   width: 280px;
   padding: 1rem;
   background: #ffffff;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+@media (min-width: 769px) {
+  .card-list .card:hover {
+    -webkit-transform: scale(1.02, 1.02);
+            transform: scale(1.02, 1.02);
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
 }
 
 .card-list .card .card1 {
@@ -344,6 +359,7 @@ header .burger {
 }
 
 .card-list .card .card-links ul {
+  justify-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,6 +393,13 @@ header .burger {
       -ms-flex-pack: center;
           justify-content: center;
   color: #707070;
+}
+
+@media (min-width: 769px) {
+  .skillset .skills {
+    margin: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .skillset .skills .frontend,
@@ -427,6 +450,22 @@ header .burger {
           flex-direction: column;
 }
 
+@media (min-width: 769px) {
+  .skillset .skills .frontend ul,
+  .skillset .skills .other-tools ul,
+  .skillset .skills .backend ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .skillset .skills .frontend ul li,
 .skillset .skills .other-tools ul li,
 .skillset .skills .backend ul li {
@@ -452,7 +491,7 @@ header .burger {
   .skillset .skills .frontend ul li,
   .skillset .skills .other-tools ul li,
   .skillset .skills .backend ul li {
-    width: 50%;
+    width: 35%;
   }
 }
 
@@ -503,6 +542,8 @@ header .burger {
 @media (min-width: 769px) {
   .about {
     margin: 1rem;
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -633,6 +674,13 @@ header .burger {
 
 .contact {
   margin: 1rem;
+}
+
+@media (min-width: 769px) {
+  .contact {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 .contact h1 {
@@ -770,6 +818,12 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 769px) {
+  footer {
+    margin-top: 1rem;
+  }
 }
 
 footer ul {
@@ -929,6 +983,21 @@ footer p {
     position: absolute;
     top: 50px;
     right: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .circle-d1 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #01dddd;
+    position: absolute;
+    right: 150px;
+    top: 200px;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+    z-index: -1;
   }
 }
 /*# sourceMappingURL=main.css.map */

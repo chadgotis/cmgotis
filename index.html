@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CM.gotis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -39,11 +43,25 @@
         <div class="circle"></div>
         <div class="triangle1"></div>
         <div class="triangle2"></div>
+        <!-- desktop -->
+        <div class="circle-d1"></div>
+        <div class="circle-d2"></div>
+        <div class="triangle-d1"></div>
+        <div class="triangle-d2"></div>
+        <!-- desktop -->
         <main>
-          <img src="./assets/web_developer.svg" alt="developer" />
+          <img
+            class="wow fadeInLeft"
+            src="./assets/web_developer.svg"
+            alt="developer"
+          />
           <div class="welcome-text">
-            <h1><span>Hi</span> I'm Chad</h1>
-            <h2>FrontEnd Developer</h2>
+            <h1 class="wow bounceIn" data-wow-delay="1.5s">
+              <span>Hi</span> I'm Chad
+            </h1>
+            <h2 class="wow fadeIn" data-wow-delay="2s">
+              Front-end Developer
+            </h2>
           </div>
         </main>
       </div>
@@ -55,18 +73,12 @@
         <div class="circle2"></div>
         <div class="circle3"></div>
 
-        <!-- desktop -->
-        <div class="circle-d1"></div>
-        <div class="circle-d2"></div>
-        <div class="triangle-d1"></div>
-        <div class="triangle-d2"></div>
-        <!-- desktop -->
         <div class="project-title">
           <h1>My Projects</h1>
           <div class="line"></div>
         </div>
         <div class="card-list">
-          <div class="card">
+          <div class="card wow bounceIn" data-wow-offset="100">
             <div class="card-image card1"></div>
             <div class="card-content">
               <h3>Travelium Landing Page</h3>
@@ -77,12 +89,28 @@
             </div>
             <div class="card-links">
               <ul>
-                <li><a href="#">Github</a></li>
-                <li><a href="#">Live Demo</a></li>
+                <li>
+                  <a
+                    href="https://github.com/chadgotis/Travelium"
+                    target="_blank"
+                    >Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://chadgotis.github.io/Travelium/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
-          <div class="card">
+          <div
+            class="card wow bounceIn"
+            data-wow-offset="100"
+            data-wow-delay=".5s"
+          >
             <div class="card-image card2"></div>
             <div class="card-content">
               <h3>Foodster Recipe App</h3>
@@ -93,12 +121,28 @@
             </div>
             <div class="card-links">
               <ul>
-                <li><a href="#">Github</a></li>
-                <li><a href="#">Live Demo</a></li>
+                <li>
+                  <a
+                    href="https://github.com/chadgotis/Foodster"
+                    target="_blank"
+                    >Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://chadgotis.github.io/Foodster/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
-          <div class="card">
+          <div
+            class="card wow bounceIn"
+            data-wow-offset="100"
+            data-wow-delay="1s"
+          >
             <div class="card-image card3"></div>
             <div class="card-content">
               <h3>Covid19 tracking App</h3>
@@ -109,24 +153,20 @@
             </div>
             <div class="card-links">
               <ul>
-                <li><a href="#">Github</a></li>
-                <li><a href="#">Live Demo</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-image card3"></div>
-            <div class="card-content">
-              <h3>Covid19 tracking App</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut
-              </p>
-            </div>
-            <div class="card-links">
-              <ul>
-                <li><a href="#">Github</a></li>
-                <li><a href="#">Live Demo</a></li>
+                <li>
+                  <a
+                    href="https://github.com/chadgotis/Covid19ph"
+                    target="_blank"
+                    >Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://chadgotis.github.io/Covid19ph/"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -139,7 +179,7 @@
           <h1>Skills</h1>
         </div>
         <div class="skills">
-          <div class="frontend">
+          <div class="frontend wow fadeIn" data-wow-delay=".3s">
             <h2>FrontEnd</h2>
             <div class="line"></div>
             <ul>
@@ -151,7 +191,7 @@
               <li>Bootstrap</li>
             </ul>
           </div>
-          <div class="other-tools">
+          <div class="other-tools wow fadeIn" data-wow-delay=".6s">
             <h2>Other Tools</h2>
             <div class="line"></div>
             <ul>
@@ -162,7 +202,7 @@
               <li>Adobe Illustrator</li>
             </ul>
           </div>
-          <div class="backend">
+          <div class="backend wow fadeIn" data-wow-delay=".9s">
             <h2>Backend</h2>
             <div class="line"></div>
             <ul>
@@ -183,8 +223,13 @@
         <div class="about-chad">
           <div class="line"></div>
           <div class="about-flex">
-            <img src="./assets/coding_.svg" alt="coding" />
-            <div class="story">
+            <img
+              class="wow fadeInLeft"
+              data-wow-delay=".3s"
+              src="./assets/coding_.svg"
+              alt="coding"
+            />
+            <div class="story wow fadeInRight" data-wow-delay=".6s">
               <h1 class="show-desktop">About Chad</h1>
               <div class="line123"></div>
               <p>
@@ -203,14 +248,21 @@
       <!-- about -->
       <!-- contact -->
       <div id="contact" class="contact">
-        <h1>Contact Me</h1>
-        <div class="line"></div>
+        <h1 class="wow fadeInLeft" data-wow-delay=".6s">Contact Me</h1>
+        <div class="line wow fadeInLeft" data-wow-delay=".6s"></div>
         <div class="contact-section">
-          <img src="./assets/new_message.svg" alt="message" />
+          <img
+            class="wow fadeInRight"
+            data-wow-delay=".3s"
+            src="./assets/new_message.svg"
+            alt="message"
+          />
           <form
             action="mailto:chadgotis97@gmail.com"
             method="post"
             enctype="text/plain"
+            class="wow fadeInLeft"
+            data-wow-delay=".6s"
           >
             <input type="text" name="name" placeholder="Full Name" />
             <input type="email" name="email" placeholder="Email" />
@@ -238,6 +290,7 @@
       </footer>
       <!-- footer -->
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

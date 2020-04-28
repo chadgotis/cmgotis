@@ -44,12 +44,15 @@ header {
   top: 0;
   overflow: hidden;
   z-index: 99;
+  padding-right: 0;
+  padding-left: 0;
 
   .logo {
     margin-right: auto;
     font-size: $logo-size;
     align-self: center;
     justify-self: center;
+    margin-left: 1rem;
     span {
       font-weight: bold;
     }
@@ -95,7 +98,8 @@ header {
     margin-top: 2rem;
   }
   @include media(">tablet") {
-    margin-top: 4rem;
+    height: 400px;
+    // margin-top: 2rem;
     height: 700px;
   }
   .circle {
@@ -145,7 +149,7 @@ header {
     }
     @include media(">tablet") {
       display: flex;
-      width: 80%;
+      width: 900px;
     }
     img {
       min-width: 290px;
@@ -153,7 +157,7 @@ header {
         max-width: 200px;
       }
       @include media(">tablet") {
-        width: 450px;
+        min-width: 400px;
       }
     }
     .welcome-text {
@@ -164,13 +168,16 @@ header {
       }
       @include media(">tablet") {
         align-self: flex-start;
+        // flex-direction: column;
+        // flex-grow: 1;
+        // line-height: 100%;
       }
       h1 {
         color: $font-color;
         font-weight: normal;
         text-align: center;
         @include media(">tablet") {
-          font-size: 4rem;
+          font-size: 2.5rem;
 
           font-weight: 500;
         }
@@ -193,10 +200,11 @@ header {
           line-height: 25px;
         }
         @include media(">tablet") {
-          font-size: 3rem;
+          font-size: 2.5rem;
           line-height: 50px;
           font-weight: 500;
-          width: 800px;
+          text-align: center;
+          margin-top: -1rem;
         }
       }
     }
@@ -233,6 +241,14 @@ header {
     width: 280px;
     padding: 1rem;
     background: $white;
+    transition: 0.2s ease-out;
+
+    @include media(">tablet") {
+      &:hover {
+        transform: scale(1.02, 1.02);
+        transition: 0.2s ease;
+      }
+    }
     .card1 {
       background: url(../assets/travelium.jpg);
     }
@@ -254,6 +270,7 @@ header {
     }
     .card-links {
       ul {
+        justify-self: flex-end;
         display: flex;
         list-style-type: none;
         justify-content: space-between;
@@ -284,6 +301,10 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     color: $font-color;
+    @include media(">tablet") {
+      margin: 1rem;
+      margin-bottom: 1rem;
+    }
 
     .frontend,
     .other-tools,
@@ -304,13 +325,18 @@ header {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        @include media(">tablet") {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+        }
 
         li {
           @include media(">=custom1", "<=tablet") {
             width: 90%;
           }
           @include media(">tablet") {
-            width: 50%;
+            width: 35%;
           }
           width: 200px;
           margin: auto;
@@ -380,6 +406,8 @@ header {
   padding: 1rem;
   @include media(">tablet") {
     margin: 1rem;
+    width: 90%;
+    margin: auto;
   }
   .show-mobile {
     text-align: center;
@@ -459,6 +487,10 @@ header {
 // contact
 .contact {
   margin: 1rem;
+  @include media(">tablet") {
+    width: 90%;
+    margin: auto;
+  }
   h1 {
     text-align: center;
     color: $font-color;
@@ -548,6 +580,10 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include media(">tablet") {
+    margin-top: 1rem;
+  }
 
   ul {
     display: flex;
@@ -688,5 +724,18 @@ footer {
     position: absolute;
     top: 50px;
     right: 0;
+  }
+}
+.circle-d1 {
+  @include media(">tablet") {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: $blue;
+    position: absolute;
+    right: 150px;
+    top: 200px;
+    transform: rotate(30deg);
+    z-index: -1;
   }
 }
