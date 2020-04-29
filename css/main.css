@@ -324,6 +324,7 @@ header .burger {
   background: #ffffff;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
+  position: relative;
 }
 
 @media (min-width: 769px) {
@@ -347,6 +348,10 @@ header .burger {
   background: url(../assets/bantaycovid.jpg);
 }
 
+.card-list .card .card4 {
+  background: url(../assets/1.jpg);
+}
+
 .card-list .card .card-image {
   width: 100%;
   height: 200px;
@@ -357,6 +362,28 @@ header .burger {
 .card-list .card .card-content {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.card-list .card .card-content .tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0.4rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-list .card .card-content .tech li {
+  background: #ff598f;
+  padding: 0.5rem;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.6rem;
 }
 
 .card-list .card .card-links ul {
@@ -993,6 +1020,16 @@ footer p {
     z-index: -1;
     right: -180px;
     bottom: -150px;
+  }
+  .about-c2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background: #fd8a5e;
+    z-index: -1;
+    left: -180px;
+    top: -10px;
   }
 }
 
