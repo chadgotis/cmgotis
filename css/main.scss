@@ -36,7 +36,6 @@ $logo-size: 1.2rem;
 header {
   display: flex;
   background: $primary;
-  padding: 1rem;
   color: $white;
   width: 100vw;
   max-width: 1366px;
@@ -44,21 +43,22 @@ header {
   top: 0;
   overflow: hidden;
   z-index: 99;
-  padding-right: 0;
-  padding-left: 0;
 
   .logo {
-    margin-right: auto;
-    font-size: $logo-size;
     align-self: center;
     justify-self: center;
+    margin: 0.1rem 0;
     margin-left: 1rem;
-    span {
-      font-weight: bold;
+    margin-right: auto;
+
+    img {
+      width: 60px;
+      height: 60px;
     }
   }
   nav {
     display: none;
+    align-self: center;
     @include media(">tablet") {
       display: flex;
       margin-right: 2rem;
@@ -79,6 +79,7 @@ header {
   .burger {
     margin-right: 2rem;
     cursor: pointer;
+    align-self: center;
     @include media(">tablet") {
       display: none;
     }

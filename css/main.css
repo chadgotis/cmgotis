@@ -35,7 +35,6 @@ header {
   display: -ms-flexbox;
   display: flex;
   background: #00bfaf;
-  padding: 1rem;
   color: #ffffff;
   width: 100vw;
   max-width: 1366px;
@@ -43,27 +42,29 @@ header {
   top: 0;
   overflow: hidden;
   z-index: 99;
-  padding-right: 0;
-  padding-left: 0;
 }
 
 header .logo {
-  margin-right: auto;
-  font-size: 1.2rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  margin: 0.1rem 0;
   margin-left: 1rem;
+  margin-right: auto;
 }
 
-header .logo span {
-  font-weight: bold;
+header .logo img {
+  width: 60px;
+  height: 60px;
 }
 
 header nav {
   display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media (min-width: 769px) {
@@ -94,6 +95,9 @@ header nav ul li a {
 header .burger {
   margin-right: 2rem;
   cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media (min-width: 769px) {
