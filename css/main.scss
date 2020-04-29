@@ -101,6 +101,7 @@ header {
     height: 400px;
     // margin-top: 2rem;
     height: 700px;
+    position: relative;
   }
   .circle {
     width: 150px;
@@ -408,6 +409,7 @@ header {
     margin: 1rem;
     width: 90%;
     margin: auto;
+    position: relative;
   }
   .show-mobile {
     text-align: center;
@@ -490,6 +492,7 @@ header {
   @include media(">tablet") {
     width: 90%;
     margin: auto;
+    position: relative;
   }
   h1 {
     text-align: center;
@@ -583,11 +586,19 @@ footer {
 
   @include media(">tablet") {
     margin-top: 1rem;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
   }
 
   ul {
     display: flex;
     justify-content: center;
+    @include media(">tablet") {
+      position: absolute;
+      right: 12px;
+      top: 10%;
+    }
     li {
       list-style-type: none;
       margin: 0.6rem;
@@ -706,7 +717,17 @@ footer {
 }
 
 // circles
-@include media(">=custom1", "<=tablet") {
+@include media(">tablet") {
+  .about-c {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background: $pink;
+    z-index: -1;
+    right: -180px;
+    bottom: -150px;
+  }
 }
 .line123 {
   @include media(">=custom1", "<=tablet") {
@@ -737,5 +758,16 @@ footer {
     top: 200px;
     transform: rotate(30deg);
     z-index: -1;
+  }
+}
+.circle-d2 {
+  @include media(">tablet") {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background: $orange;
+    top: 65px;
+    right: 350px;
+    transform: rotate(30deg);
   }
 }

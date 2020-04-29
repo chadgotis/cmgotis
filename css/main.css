@@ -129,6 +129,7 @@ header .burger {
   .hero-section {
     height: 400px;
     height: 700px;
+    position: relative;
   }
 }
 
@@ -544,6 +545,7 @@ header .burger {
     margin: 1rem;
     width: 90%;
     margin: auto;
+    position: relative;
   }
 }
 
@@ -680,6 +682,7 @@ header .burger {
   .contact {
     width: 90%;
     margin: auto;
+    position: relative;
   }
 }
 
@@ -823,6 +826,14 @@ footer {
 @media (min-width: 769px) {
   footer {
     margin-top: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
   }
 }
 
@@ -833,6 +844,14 @@ footer ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 769px) {
+  footer ul {
+    position: absolute;
+    right: 12px;
+    top: 10%;
+  }
 }
 
 footer ul li {
@@ -964,6 +983,19 @@ footer p {
   }
 }
 
+@media (min-width: 769px) {
+  .about-c {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background: #ff598f;
+    z-index: -1;
+    right: -180px;
+    bottom: -150px;
+  }
+}
+
 @media (min-width: 600px) and (max-width: 768px) {
   .line123 {
     width: 90%;
@@ -998,6 +1030,19 @@ footer p {
     -webkit-transform: rotate(30deg);
             transform: rotate(30deg);
     z-index: -1;
+  }
+}
+
+@media (min-width: 769px) {
+  .circle-d2 {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background: #fd8a5e;
+    top: 65px;
+    right: 350px;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
   }
 }
 /*# sourceMappingURL=main.css.map */
