@@ -559,11 +559,11 @@ header {
     img {
       @include media(">=custom1", "<=tablet") {
         flex: 1 1 0;
-        width: 90%;
+        width: 10%;
       }
       @include media(">tablet") {
         flex: 1 1 0;
-        width: 90%;
+        // width: 90%;
       }
     }
     form {
